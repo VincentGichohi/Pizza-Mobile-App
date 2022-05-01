@@ -10,6 +10,11 @@ class PizzeriaListAPIView(generics.ListAPIView):
 
 
 class PizzeriaDetailAPIView(generics.RetrieveAPIView):
-    lookup_field = 'id',
+    lookup_field = 'id'
+    queryset = Pizzeria.objects.all()
+    serializer_class = PizzeriaDetailSerializer
+
+
+class PizzeriaCreateAPIView(generics.CreateAPIView):
     queryset = Pizzeria.objects.all()
     serializer_class = PizzeriaDetailSerializer
