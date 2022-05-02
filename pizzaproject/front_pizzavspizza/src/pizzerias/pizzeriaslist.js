@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PizzaDetail from './pizzeriadetail';
 import DummyData from "./dummydata.json";
-
+import axios from './axios';
 class PizzaList extends React.Component {
     render() {
         return (
